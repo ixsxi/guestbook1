@@ -114,9 +114,11 @@ public class GuestbookDao {
 				String query = ""; // 쿼리문 문자열만들기, ? 주의
 				query += " delete from guestbook ";
 				query += " where password = ? ";
+				query += " and no = ? ";
 				pstmt = conn.prepareStatement(query); // 쿼리로 만들기
 
-				pstmt.setInt(1, no.getNo());// ?(물음표) 중 1번째, 순서중요
+				pstmt.setString(1, no.getPassword());// ?(물음표) 중 1번째, 순서중요
+				pstmt.setInt(2, no.getNo());
 
 				count = pstmt.executeUpdate(); // 쿼리문 실행
 

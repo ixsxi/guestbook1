@@ -9,7 +9,7 @@
     GuestbookDao guestbookdao = new GuestbookDao();
     int no = Integer.parseInt(request.getParameter("no"));
     
-  	
+    
   	 
    
     GuestbookVo guestbookvo = guestbookdao.getNo(no);

@@ -10,8 +10,9 @@
 	GuestbookDao guestbookdao =new GuestbookDao();
 	
 	String pass = request.getParameter("password");
+	int no = Integer.parseInt(request.getParameter("no"));
 	
-	GuestbookVo guestbookvo = new GuestbookVo(pass);
+	GuestbookVo guestbookvo = new GuestbookVo(no,pass);
 	//
 	guestbookdao.delete(guestbookvo);
 	

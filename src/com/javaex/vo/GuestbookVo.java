@@ -20,6 +20,25 @@ public class GuestbookVo {
 
 
 
+
+
+
+
+
+	public GuestbookVo(int no, String password) {
+		super();
+		this.no = no;
+		this.password = password;
+	}
+
+
+
+
+
+
+
+
+
 	public GuestbookVo(String password) {
 		super();
 		this.password = password;
